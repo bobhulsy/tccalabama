@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>The Qualified Conservative — Alabama</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 1.5rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      background: #f9f9f9;
+    }
+
+    header, footer {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0074cc;
+      font-size: 0.95rem;
+    }
+
+    input[type="text"] {
+      font-size: 1rem;
+      padding: 0.75rem;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      background-color: #0074cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Qualified Conservative – Alabama</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="#about">About</a>
+      <a href="mailto:contact@tccalabama.com">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <p>Enter your ZIP Code to begin the official grassroots survey:</p>
+    <input type="text" id="zipInput" placeholder="ZIP Code" inputmode="numeric" pattern="[0-9]*" />
+    <button onclick="lookupAndRedirect()">Start Survey</button>
+  </main>
+
+  <footer>
+    <p>Paid for by The Conservative Caucus. ©2025</p>
+  </footer>
+
+  <script>
+    async function lookupAndRedirect() {
+      const zip = document.getElementById('zipInput').value.trim();
+
+      const zipMap = await fetch('/zip_to_district.json').then(r => r.json());
+      const districtMap = await fetch('/district_lookup.json').then(r => r.json());
+
+      const districtList = zipMap[zip];
+
+      if (!districtList || districtList.length === 0) {
+        alert("ZIP not found. Please enter a valid Alabama ZIP.");
+        return;
+      }
+
+      const district = districtList[0];
+      const districtData = districtMap[district];
+
+      if (!districtData) {
+        alert("District data not available.");
+        return;
+      }
+
+      const params = new URLSearchParams({
+        state: districtData.state,
+        district: districtData.district,
+        rep_name: districtData.rep_name,
+        sen1_name: districtData.sen1_name,
+        sen2_name: districtData.sen2_name,
+        custom_rep_q: districtData.custom_rep_q,
+        custom_sen1_q: districtData.custom_sen1_q,
+        custom_sen2_q: districtData.custom_sen2_q
+      });
+
+      const zohoSurveyBase = "https://survey.zohopublic.com/zs/FdD9PM";
+      window.location.href = `${zohoSurveyBase}?${params.toString()}`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+{
+  "AL-01": {
+    "state": "AL",
+    "district": "AL-01",
+    "rep_name": "Barry Moore",
+    "rep_party": "R",
+    "sen1_name": "Katie Britt",
+    "sen1_party": "R",
+    "sen2_name": "Tommy Tuberville",
+    "sen2_party": "R",
+    "custom_rep_q": "How would you rate Rep. Barry Moore?",
+    "custom_sen1_q": "How would you rate Sen. Katie Britt?",
+    "custom_sen2_q": "How would you rate Sen. Tommy Tuberville?"
+  },
+  "AL-02": {
+    "state": "AL",
+    "district": "AL-02",
+    "rep_name": "Shomari Figures",
+    "rep_party": "D",
+    "sen1_name": "Katie Britt",
+    "sen1_party": "R",
+    "sen2_name": "Tommy Tuberville",
+    "sen2_party": "R",
+    "custom_rep_q": "How would you rate Rep. Shomari Figures?",
+    "custom_sen1_q": "How would you rate Sen. Katie Britt?",
+    "custom_sen2_q": "How would you rate Sen. Tommy Tuberville?"
+  },
+  "AL-03": {
+    "state": "AL",
+    "district": "AL-03",
+    "rep_name": "Mike Rogers",
+    "rep_party": "R",
+    "sen1_name": "Katie Britt",
+    "sen1_party": "R",
+    "sen2_name": "Tommy Tuberville",
+    "sen2_party": "R",
+    "custom_rep_q": "How would you rate Rep. Mike Rogers?",
+    "custom_sen1_q": "How would you rate Sen. Katie Britt?",
+    "custom_sen2_q": "How would you rate Sen. Tommy Tuberville?"
+  },
+  "AL-04": {
+    "state": "AL",
+    "district": "AL-04",
+    "rep_name": "Robert B. Aderholt",
+    "rep_party": "R",
+    "sen1_name": "Katie Britt",
+    "sen1_party": "R",
+    "sen2_name": "Tommy Tuberville",
+    "sen2_party": "R",
+    "custom_rep_q": "How would you rate Rep. Robert B. Aderholt?",
+    "custom_sen1_q": "How would you rate Sen. Katie Britt?",
+    "custom_sen2_q": "How would you rate Sen. Tommy Tuberville?"
+  },
+  "AL-05": {
+    "state": "AL",
+    "district": "AL-05",
+    "rep_name": "Dale W. Strong",
+    "rep_party": "R",
+    "sen1_name": "Katie Britt",
+    "sen1_party": "R",
+    "sen2_name": "Tommy Tuberville",
+    "sen2_party": "R",
+    "custom_rep_q": "How would you rate Rep. Dale W. Strong?",
+    "custom_sen1_q": "How would you rate Sen. Katie Britt?",
+    "custom_sen2_q": "How would you rate Sen. Tommy Tuberville?"
+  },
+  "AL-06": {
+    "state": "AL",
+    "district": "AL-06",
+    "rep_name": "Gary J. Palmer",
+    "rep_party": "R",
+    "sen1_name": "Katie Britt",
+    "sen1_party": "R",
+    "sen2_name": "Tommy Tuberville",
+    "sen2_party": "R",
+    "custom_rep_q": "How would you rate Rep. Gary J. Palmer?",
+    "custom_sen1_q": "How would you rate Sen. Katie Britt?",
+    "custom_sen2_q": "How would you rate Sen. Tommy Tuberville?"
+  },
+  "AL-07": {
+    "state": "AL",
+    "district": "AL-07",
+    "rep_name": "Terri A. Sewell",
+    "rep_party": "D",
+    "sen1_name": "Katie Britt",
+    "sen1_party": "R",
+    "sen2_name": "Tommy Tuberville",
+    "sen2_party": "R",
+    "custom_rep_q": "How would you rate Rep. Terri A. Sewell?",
+    "custom_sen1_q": "How would you rate Sen. Katie Britt?",
+    "custom_sen2_q": "How would you rate Sen. Tommy Tuberville?"
+  }
+}
