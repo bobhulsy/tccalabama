@@ -103,8 +103,10 @@
         return;
       }
 
-      const district = districtList[0];
-      const districtData = districtMap[district];
+      const rawDistrict = districtList[0];
+      const paddedDistrict = rawDistrict.toString().padStart(2, '0');
+      const districtKey = `AL-${paddedDistrict}`;
+      const districtData = districtMap[districtKey];
 
       if (!districtData) {
         alert("District data not available.");
